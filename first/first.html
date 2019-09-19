@@ -1,0 +1,43 @@
+<script> 
+  
+	function header1(){
+		var array1=["X","A","B","C","D"]; //array1 array initialized
+	    var [arr1,arr2,arr3,arr4,arr5]=array1; //Destructured array1 array into variables name arr1, arr2, arr3, arr4, arr5, arr6, arr7 and arr8 respectively
+		document.write(arr1,arr2,arr3,arr4,arr5);
+		document.write("<br/>");
+	}  
+    header1();
+	
+	function column1(x){ 
+            for(var i=0;i<=8;i++) { //for conditional loop has i value initialized to 0
+            console.log(x + i);
+    }
+	}	
+	column1(0);
+	
+// Create one dimensional array
+	var arrD = new Array(9); 
+	
+// Create 2D array using 1D array 
+	for (var i = 0; i < arrD.length; i++) { 
+		arrD[i] = new Array(9); 
+	}
+  
+	var h = 0; 
+	
+// Initialize 2D array elements. 
+	for (var i = 0; i < 9; i++) {         
+    for (var j = 0; j < 4; j++) { 
+        arrD[i][j] = h++; 
+    } 
+	} 
+
+// Display the elements of 2D array. 
+	for (var i = 0; i < 9; i++) { 
+    for (var j = 0; j < 4; j++) {
+        document.write(arrD[i][j] + "   "); 
+    } 
+		document.write("<br/><br/>"); 
+	}
+	
+</script>  

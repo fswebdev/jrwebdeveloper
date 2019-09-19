@@ -1,0 +1,16 @@
+<script>
+	var x = "1-10000,1-10000,2-10000,3-10000";
+	var text1 = "1-Tony Stark";
+	var text2 = "2-Bruce Wayne";
+	const formatter = new Intl.NumberFormat('en-US',{});
+	partX = x.split('-');
+	partText1 = text1.split('-');
+	partText2 = text2.split('-');
+	value1 = parseInt(partX[1]) + parseInt(partX[3]);
+	text3 = partText1[1];
+	value2 = parseInt(partX[4]);
+	text4 = partText2[1];
+	document.write(text3 + ' - ' + formatter.format(value1));
+	document.write("<br/>");
+	document.write(text4 + ' - ' + formatter.format(value2));
+</script>

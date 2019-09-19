@@ -1,0 +1,21 @@
+label {
+	padding: 12px 10px;
+	margin-left: float;
+	margin: 10px 0px 0px 0px;
+	display: inline-block;
+}
+input {
+	padding: 6px 100px;
+	margin: 5px 0px 0px 1px;
+	border: box;
+	display: inline-block;
+}
+button {
+	padding: 12px 50px;
+	margin: 10px 0px 0px 65px;
+	border: none;
+	background-color: rgb(1, 44, 12);
+	color: #fff;
+	cursor: pointer;
+	display: grid;
+}

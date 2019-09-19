@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Jspdf</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js" integrity="sha256-gJWdmuCRBovJMD9D/TVdo4TIK8u5Sti11764sZT1DhI=" crossorigin="anonymous"></script>
+</head>
+<body>
+	<label>Author:
+	<input type="text" id="author1" placeholder="Author Name"/></label><br/>
+	<label>Price :
+	<input type="number" id="price1" placeholder="Price"/></label></br/>
+	<button id="cmd">Save as pdf</button>	
+	<script>
+// init the jsPDF library
+	const pdf = new jsPDF();
+//select the button
+	let button = document.querySelector('button');
+//add 'click' event listener for the button
+	button.addEventListener('click',printPDF)
+//actual PDF options
+	function printPDF(){	
+// @param 1 - Coordinate (in units declared at inception of PDF document) against left edge of the page
+// @param 2 - Cordinate (in units declared at inception of PDF document) against upper edge of the page
+// @param 3 - String or array of strings to be added to the page. Each line is shifted one line down per font, spacing settings declared before this call.
+	pdf.text(10,10,'Author Name:');
+	pdf.text(45,10,document.getElementById("author1").value);
+	pdf.text(10,20,'Price:');
+	pdf.text(25,20,document.getElementById("price1").value);
+//Save the PDF document (downloadable)
+	pdf.save('mydocument.pdf');
+};
+	</script>
+</body>
+</html>
+
